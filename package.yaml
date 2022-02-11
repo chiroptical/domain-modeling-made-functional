@@ -1,0 +1,25 @@
+name: domain-modeling-made-functional
+version: 0.0.1.0
+synopsis: Project synopsis
+description: See README at <https://github.com/chiroptical/domain-modeling-made-functional
+author: Barry Moore II
+github: chiroptical/domain-modeling-made-functional
+category: Package.Category
+license: BSD-3-Clause
+
+dependencies:
+  - base >=4.11 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  domain-modeling-made-functional-test:
+    source-dirs: test
+    main: Main.hs
+    ghc-options:
+      - -Wall
+      - -threaded
+    dependencies:
+      - domain-modeling-made-functional
+      - hedgehog

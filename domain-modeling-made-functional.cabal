@@ -1,0 +1,46 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           domain-modeling-made-functional
+version:        0.0.1.0
+synopsis:       Project synopsis
+description:    See README at <https://github.com/chiroptical/domain-modeling-made-functional
+category:       Package.Category
+homepage:       https://github.com/chiroptical/domain-modeling-made-functional#readme
+bug-reports:    https://github.com/chiroptical/domain-modeling-made-functional/issues
+author:         Barry Moore II
+maintainer:     Barry Moore II
+license:        BSD-3-Clause
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/chiroptical/domain-modeling-made-functional
+
+library
+  exposed-modules:
+      DomainModelingMadeFunctional
+  other-modules:
+      Paths_domain_modeling_made_functional
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.11 && <5
+  default-language: Haskell2010
+
+test-suite domain-modeling-made-functional-test
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_domain_modeling_made_functional
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded
+  build-depends:
+      base >=4.11 && <5
+    , domain-modeling-made-functional
+    , hedgehog
+  default-language: Haskell2010
